@@ -1,6 +1,6 @@
 import { LOCALES, DEFAULT_LOCALE, localeMeta, type Locale } from "@/i18n/config";
 
-export const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000").replace(/\/$/, "");
+export const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL ?? "mymugox.com").replace(/\/$/, "");
 
 /** hreflang map for a path like "" or "/privacy", including x-default. Relative URLs (metadataBase resolves them). */
 export function languageAlternates(path = ""): Record<string, string> {
