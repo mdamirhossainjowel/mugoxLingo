@@ -10,7 +10,7 @@ import { localeMeta } from "@/i18n/config";
 import { LocaleProvider } from "@/i18n/LocaleContext";
 import { siteStrings } from "@/i18n/siteUi";
 import { BRAND } from "@/lib/brand";
-import { languageAlternates, ogAlternateLocales, ogLocale, siteUrl } from "@/lib/seo";
+import { languageAlternates, ogAlternateLocales, ogImage, ogLocale, siteUrl } from "@/lib/seo";
 import { PinyinPrefApplier } from "@/features/practice/ChineseTools";
 import Analytics from "@/features/analytics/Analytics";
 import ConsentBanner from "@/features/analytics/ConsentBanner";
@@ -30,9 +30,10 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     title: { default: `${BRAND.name} - ${d.tagline}`, template: `%s | ${BRAND.name}` },
     description: d.heroBody, applicationName: BRAND.name, manifest: "/manifest.webmanifest",
     verification: process.env.NEXT_PUBLIC_GSC_VERIFICATION ? { google: process.env.NEXT_PUBLIC_GSC_VERIFICATION } : undefined,
+    icons: { apple: [{ url: "/apple-icon", sizes: "180x180", type: "image/png" }] },
     alternates: { languages: languageAlternates() },
-    openGraph: { siteName: BRAND.name, type: "website", locale: ogLocale(locale), alternateLocale: ogAlternateLocales(locale) },
-    twitter: { card: "summary_large_image" },
+    openGraph: { siteName: BRAND.name, type: "website", locale: ogLocale(locale), alternateLocale: ogAlternateLocales(locale), images: ogImage(locale) },
+    twitter: { card: "summary_large_image", images: ogImage(locale).map((i) => i.url) },
   };
 }
 

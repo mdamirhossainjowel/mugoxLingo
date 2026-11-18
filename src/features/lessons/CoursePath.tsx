@@ -55,14 +55,14 @@ export default function CoursePath({ locale, course, serverProgress, accountsEna
               const open = ready && (done || idx <= currentIdx || allDone);
               const cur = ready && idx === currentIdx && !allDone;
               const body = (<>
-                <motion.span aria-hidden className={`grid size-14 shrink-0 place-items-center rounded-full font-display text-2xl font-extrabold ${done ? "bg-lagoon text-white" : cur ? "bg-mango" : "bg-mist"}`}
+                <motion.span aria-hidden className={`grid size-14 shrink-0 place-items-center rounded-full font-display text-2xl font-extrabold ${done ? "bg-lagoon-deep text-white" : cur ? "bg-mango" : "bg-mist"}`}
                   animate={cur && !reduce ? { scale: [1, 1.12, 1] } : undefined} transition={{ duration: 1.4, repeat: Infinity }}>{done ? "✓" : open ? "★" : "🔒"}</motion.span>
                 <span><span className="block font-display text-xl font-extrabold">{lessonTitle(l, locale)}</span><span className="block text-sm font-semibold opacity-70">{lessonObjective(l, course, locale)}</span></span>
               </>);
               const cls = "flex items-center gap-4 rounded-[var(--radius-bubble)] bg-white p-4 shadow-[0_6px_0_#d9d0f0]";
               return (<li key={l.id}>{open
                 ? <motion.div whileHover={reduce ? undefined : { x: 6 }}><Link href={`/${locale}/learn/${course.id}/${l.id}`} className={cls}>{body}</Link></motion.div>
-                : <div className={`${cls} opacity-60`} aria-label={`${lessonTitle(l, locale)} (${ui.locked})`}>{body}</div>}</li>);
+                : <div className={`${cls} opacity-70`} aria-label={`${lessonTitle(l, locale)} (${ui.locked})`}>{body}</div>}</li>);
             })}
           </ol>
         </section>
@@ -71,7 +71,7 @@ export default function CoursePath({ locale, course, serverProgress, accountsEna
         <div className="mt-10 rounded-[var(--radius-bubble)] bg-white p-5 shadow-[0_6px_0_#d9d0f0]">
           <p className="text-sm font-semibold opacity-70">{ui.saveNote}</p>
           {accountsEnabled && <><p className="mt-2 font-display text-xl font-extrabold">{at.syncTitle}</p><p className="font-semibold">{at.syncBody}</p>
-            <Link2 href={`/${locale}/signup`} className="mt-3 inline-block rounded-full bg-lagoon px-5 py-2 font-bold text-white">{at.signup}</Link2></>}
+            <Link2 href={`/${locale}/signup`} className="mt-3 inline-block rounded-full bg-lagoon-deep px-5 py-2 font-bold text-white">{at.signup}</Link2></>}
         </div>)}
     </main>
   );

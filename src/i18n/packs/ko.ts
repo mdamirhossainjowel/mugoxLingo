@@ -13,6 +13,7 @@ export const ko: LocalePack = {
     footer: "© MugoX. 호기심 많은 학습자를 위해 만들었어요.", mascotLabel: "Mugo, MugoX의 마스코트",
   },
   ui: {
+    audioHelp: "소리가 나지 않나요? 휴대폰이 무음이 아닌지, 미디어 볼륨이 켜져 있는지, 이 언어의 음성이 설치되어 있는지 확인해 주세요 (Android: 설정 › 시스템 › 언어 › 텍스트 음성 변환, iPhone: 설정 › 손쉬운 사용 › 음성 콘텐츠 › 음성).",
     check: "확인", cont: "계속", correct: "정답!", wrong: "아쉬워요", answerWas: "정답:", lessonDone: "레슨 완료!", outOfHearts: "하트가 모두 떨어졌어요", outHint: "숨을 고르고 레슨을 다시 시작해 보세요.",
     tryAgain: "다시 시도", backToPath: "코스로 돌아가기", nextLesson: "다음 레슨", streakDays: "일 연속", goal: "일일 목표", continueLearning: "계속 학습하기", exit: "레슨 나가기", typeHere: "답을 입력하세요",
     matchHint: "단어를 누른 다음, 짝을 눌러 보세요", perfect: "완벽해요!", newBadges: "새 배지", demo: "체험 코스", start: "시작", replay: "다시 연습", locked: "잠김",
@@ -64,11 +65,6 @@ export const ko: LocalePack = {
       { icon: "🚀", title: "매일 성장하기", body: "XP를 모으고 연속 기록을 이어가며 배지를 열어요." },
     ],
     aboutTitle: "소개",
-    aboutBody: [
-      "MugoX Lingo는 게임처럼 즐기는 무료 언어 학습 앱이에요. 짧은 레슨, 단어 카드, 스피드 라운드, 단원 시험으로 하루 몇 분씩 어휘력과 듣기 실력을 키울 수 있어요.",
-      "게스트로 바로 시작할 수 있어요. 계정은 모든 기기에서 진행 상황을 저장해 줄 뿐이에요. 현재 코스: 영어 사용자를 위한 스페인어, 중국어(표준어), 일본어, 한국어, 벵골어, 그리고 벵골어·힌디어·아랍어·스페인어·프랑스어·포르투갈어·중국어·일본어·한국어 사용자를 위한 영어.",
-      "레슨은 저희가 직접 만들고, 독자가 알려 주신 오류는 바로잡아요. 질문이나 수정 제안은 문의 페이지를 이용해 주세요. 이 사이트는 일부 콘텐츠 페이지의 광고로 운영되며, 레슨 안에는 광고가 없어요.",
-    ],
     adLabel: "광고",
     faqTitle: "자주 묻는 질문",
     faq: [
@@ -80,16 +76,8 @@ export const ko: LocalePack = {
     footer: { about: "소개", privacy: "개인정보", terms: "이용약관", contact: "문의", rights: "© MugoX Lingo. 호기심 많은 학습자를 위해 만들었어요." },
     skip: "본문으로 건너뛰기", language: "언어", cookieSettings: "쿠키 설정",
     consent: { adsNote: "이 동의로 일부 페이지에 Google 광고를 표시할 수 있어요. 레슨 안에는 표시하지 않아요.", title: "쿠키와 분석", body: "방문 수를 세고 어떤 레슨이 도움이 되는지 알아보기 위해 Google Analytics를 사용해도 될까요? 동의하지 않으면 꺼져 있으며, 이름이나 이메일은 절대 전송되지 않아요.", accept: "동의", decline: "괜찮아요" },
-    notFoundTitle: "페이지를 찾을 수 없어요", home: "홈으로 돌아가기", errorTitle: "문제가 생겼어요", errorBody: "다시 시도해 주세요.", retry: "다시 시도", loading: "불러오는 중…",
-    draft: "초안입니다. 공개 전에 검토를 받으세요.", privacyTitle: "개인정보",
-    privacyBody: [
-      "게스트: 진행 상황은 기기의 이 브라우저(로컬 저장소)에 저장돼요. 계정을 만들고 직접 가져오기를 선택하지 않는 한 저희는 받지 않아요.",
-      "계정: Neon를 사용해 이메일, 표시 이름, 언어 설정, 학습 진행 상황을 저장해요. 로그인 유지를 위해 세션 쿠키를 사용해요.",
-      "계정 페이지에서 코스를 초기화할 수 있어요. 계정이나 데이터를 삭제하려면 문의 페이지를 이용해 주세요.",
-      "분석: 동의한 경우에만 방문 수와 레슨 활동을 세기 위해 Google Analytics를 사용해요. 이름이나 이메일은 전송되지 않아요. mgxl 접두사의 쿠키를 사용하며, 하단의 쿠키 설정에서 언제든지 선택을 바꿀 수 있어요.",
-      "광고: 동의하시면 일부 콘텐츠 페이지에 Google AdSense 광고를 표시해요. 레슨 안에는 표시하지 않아요. Google과 파트너는 이 사이트와 다른 웹사이트 방문 기록을 바탕으로 광고를 게재하기 위해 쿠키를 사용해요. 기본적으로 개인 맞춤이 아닌 광고를 요청해요. adssettings.google.com 또는 aboutads.info에서 맞춤 광고에 대해 알아보고 거부할 수 있으며, 하단의 쿠키 설정에서 언제든지 선택을 바꿀 수 있어요.",
-    ],
+    notFoundTitle: "페이지를 찾을 수 없어요", home: "홈으로 돌아가기", errorTitle: "문제가 생겼어요", errorBody: "다시 시도해 주세요.", retry: "다시 시도", loading: "불러오는 중…", privacyTitle: "개인정보",
     termsTitle: "이용약관", termsBody: ["MugoX는 있는 그대로 제공되는 학습 앱이에요. 레슨 내용에 오류가 있을 수 있으니 발견하면 알려 주세요.", "진행 상황, XP 또는 다른 사용자의 데이터를 조작하려 하지 마세요. 그런 계정은 제한되거나 삭제될 수 있어요.", "계정은 만 13세 이상을 위한 것이에요. 더 어린 학습자는 부모님이나 보호자와 함께 게스트 모드를 이용해 주세요."],
-    contactTitle: "문의", contactBody: "여기로 연락해 주세요:", contactMissing: "연락처가 아직 설정되지 않았어요.",
+    contactTitle: "문의", 
   },
 };

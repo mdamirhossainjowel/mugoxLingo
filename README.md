@@ -22,3 +22,8 @@ Best: extract the new zip into a NEW empty folder, copy your `.env.local` over, 
 If you extract over an old folder, files that were removed in the new version stay behind (for example the old Supabase code). `npm run dev` and `npm run build` now delete the known leftovers automatically (`scripts/clean-stale.mjs`), but a fresh folder is cleaner.
 
 AdSense, Google Analytics and the cookie banner are described in SEO_ANALYTICS.md. Translations of every screen live in src/i18n; course titles come from src/i18n/catalog.ts.
+
+## Sound on phones
+Lesson audio uses the phone's own text-to-speech voices (not recorded audio). If a learner hears nothing, the app shows what to check: silent mode, media volume, and an installed voice for the language. Android: Settings > System > Language > Text-to-speech. iPhone: Settings > Accessibility > Spoken Content > Voices. Recorded native-speaker audio files would work on every phone and are the better long-term answer.
+
+See AUDIT.md for what the checks cover and the open questions, and SEO_ANALYTICS.md for sitemap, robots, guides, AdSense and analytics details.

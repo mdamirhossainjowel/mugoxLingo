@@ -13,6 +13,7 @@ export const zh: LocalePack = {
     footer: "© MugoX。为好奇的学习者而生。", mascotLabel: "Mugo，MugoX 的吉祥物",
   },
   ui: {
+    audioHelp: "没有声音？请确认手机没有静音、调高媒体音量，并检查是否安装了该语言的语音（安卓：设置 › 系统 › 语言 › 文字转语音；iPhone：设置 › 辅助功能 › 朗读内容 › 声音）。",
     check: "检查", cont: "继续", correct: "答对了！", wrong: "差一点", answerWas: "正确答案：", lessonDone: "课程完成！", outOfHearts: "爱心用完了", outHint: "深呼吸，然后重新开始这节课。",
     tryAgain: "再试一次", backToPath: "返回课程", nextLesson: "下一课", streakDays: "天连续打卡", goal: "每日目标", continueLearning: "继续学习", exit: "退出课程", typeHere: "输入你的答案",
     matchHint: "先点一个词，再点与它配对的词", perfect: "满分通关！", newBadges: "新徽章", demo: "试用课程", start: "开始", replay: "再练一次", locked: "未解锁",
@@ -59,11 +60,6 @@ export const zh: LocalePack = {
       { icon: "🚀", title: "每天进步", body: "赚取 XP，保持连续打卡，解锁徽章。" },
     ],
     aboutTitle: "关于我们",
-    aboutBody: [
-      "MugoX Lingo 是一款免费的游戏化语言学习应用。简短的课程、单词卡、极速挑战和单元测验，帮助你每天花几分钟积累词汇、提升听力。",
-      "你可以直接以访客身份开始。账号只是让进度在你的所有设备上保存。目前的课程：面向英语使用者的西班牙语、中文（普通话）、日语、韩语和孟加拉语，以及面向孟加拉语、印地语、阿拉伯语、西班牙语、法语、葡萄牙语、中文、日语和韩语使用者的英语。",
-      "课程由我们自己编写，并会根据读者的反馈修正错误。如有疑问或更正，请访问联系页面。本站通过少数内容页面上的广告获得支持；课程内不会出现广告。",
-    ],
     adLabel: "广告",
     faqTitle: "常见问题",
     faq: [
@@ -75,15 +71,8 @@ export const zh: LocalePack = {
     footer: { about: "关于我们", privacy: "隐私", terms: "条款", contact: "联系我们", rights: "© MugoX Lingo。为好奇的学习者而生。" },
     skip: "跳到正文", language: "语言", cookieSettings: "Cookie 设置",
     consent: { adsNote: "这也允许我们在少数页面展示 Google 广告，课程内绝不展示。", title: "Cookie 与数据分析", body: "我们可以使用 Google Analytics 统计访问量、了解哪些课程有帮助吗？除非你同意，否则它不会启用，也绝不会收到你的姓名或邮箱。", accept: "同意", decline: "不用了" },
-    notFoundTitle: "找不到该页面", home: "返回首页", errorTitle: "出错了", errorBody: "请重试。", retry: "重试", loading: "加载中…", draft: "草稿文本，上线前请找人审阅。", privacyTitle: "隐私",
-    privacyBody: [
-      "访客：你的进度保存在你设备上的这个浏览器（本地存储）中。除非你创建账号并选择导入，否则我们不会收到这些数据。",
-      "账号：我们使用 Neon 保存你的邮箱、显示名称、语言设置和学习进度。会话 Cookie 让你保持登录。",
-      "你可以在账号页面重置课程。如需删除账号或数据，请使用联系页面。",
-      "数据分析：仅在你同意后，我们才使用 Google Analytics 统计访问量和课程活动。它不会收到姓名或邮箱。它使用前缀为 mgxl 的 Cookie，你可以随时通过页脚的“Cookie 设置”更改选择。",
-      "广告：如果你同意，我们会在少数内容页面展示 Google AdSense 广告，课程内绝不展示。Google 及其合作伙伴使用 Cookie，根据你对本站及其他网站的访问情况投放广告。我们默认请求非个性化广告。你可以在 adssettings.google.com 或 aboutads.info 了解或选择退出个性化广告，也可以随时通过页脚的“Cookie 设置”更改选择。",
-    ],
+    notFoundTitle: "找不到该页面", home: "返回首页", errorTitle: "出错了", errorBody: "请重试。", retry: "重试", loading: "加载中…",  privacyTitle: "隐私",
     termsTitle: "条款", termsBody: ["MugoX 是一款按现状提供的学习应用。课程内容可能有错误，如果发现请告诉我们。", "请勿篡改进度、XP 或其他用户的数据。我们可能限制或删除这样做的账号。", "账号仅供年满 13 岁的人使用。年龄更小的学习者请在家长或监护人陪同下使用访客模式。"],
-    contactTitle: "联系我们", contactBody: "请写信给我们：", contactMissing: "尚未设置联系地址。",
+    contactTitle: "联系我们", 
   },
 };

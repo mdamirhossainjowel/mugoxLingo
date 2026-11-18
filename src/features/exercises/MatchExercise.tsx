@@ -8,7 +8,7 @@ import { localizePrompt } from "@/i18n/prompts";
 
 type Match = Extract<Exercise, { type: "match" }>;
 const without = (m: Record<string, string>, k: string) => Object.fromEntries(Object.entries(m).filter(([x]) => x !== k));
-const hues = ["bg-coral text-white", "bg-lagoon text-white", "bg-mango text-plum", "bg-plum-soft text-white", "bg-coral-deep text-white"];
+const hues = ["bg-plum text-white", "bg-lagoon-deep text-white", "bg-mango text-plum", "bg-plum-soft text-white", "bg-coral-deep text-white"];
 
 export default function MatchExercise({ exercise, locked, ui, onChange }: RendererProps<Match>) {
   const locale = useLocale(); const prompt = localizePrompt(exercise.prompt, locale);

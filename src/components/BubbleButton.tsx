@@ -4,7 +4,7 @@ import { motion, useReducedMotion } from "framer-motion";
 
 const tones = {
   mango: "bg-mango text-plum shadow-[0_6px_0_var(--color-mango-deep)]",
-  lagoon: "bg-lagoon text-white shadow-[0_6px_0_var(--color-lagoon-deep)]",
+  lagoon: "bg-lagoon-deep text-white shadow-[0_6px_0_var(--color-lagoon-dark)]",
   white: "bg-white text-plum shadow-[0_6px_0_#d9d0f0]",
 } as const;
 

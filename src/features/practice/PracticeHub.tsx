@@ -45,7 +45,7 @@ export default function PracticeHub({ locale, course, completed, dailyXp, server
             <span className="block text-sm font-semibold opacity-75">{open ? (b ? `🏆 ${t.examBest}: ${b.best}%${b.passed ? " ✓" : ""}` : t.examTake) : `🔒 ${t.examLocked}`}</span></span>
             <span aria-hidden className="font-display text-2xl">{open ? <ForwardArrow /> : null}</span></>);
           return (<li key={u.id}>{open ? <motion.div whileHover={reduce ? undefined : { x: 6 }}><Link href={`${base}/exam/${u.id}`} className={`${tile} flex items-center justify-between`}>{body}</Link></motion.div>
-            : <div className={`${tile} flex items-center justify-between opacity-60`}>{body}</div>}</li>);
+            : <div className={`${tile} flex items-center justify-between opacity-70`}>{body}</div>}</li>);
         })}</ul></div>
     </section>);
 }

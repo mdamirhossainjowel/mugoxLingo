@@ -1,3 +1,4 @@
+import { fillEmail } from "@/lib/brand";
 import type { SiteUi } from "@/i18n/siteUi";
 export default function Faq({ s }: { s: SiteUi }) {
   return (
@@ -7,6 +8,6 @@ export default function Faq({ s }: { s: SiteUi }) {
         <details key={f.q} className="group rounded-[var(--radius-bubble)] bg-white p-5 shadow-[0_6px_0_#d9d0f0]">
           <summary className="cursor-pointer list-none font-display text-xl font-extrabold marker:hidden">
             <span aria-hidden className="me-2 inline-block transition-transform rtl:-scale-x-100 group-open:rotate-90 group-open:rtl:-rotate-90 motion-reduce:transition-none">▶</span>{f.q}</summary>
-          <p className="mt-3 font-semibold opacity-80">{f.a}</p></details>))}</div>
+          <p className="mt-3 font-semibold opacity-80">{fillEmail(f.a)}</p></details>))}</div>
     </section>);
 }

@@ -14,6 +14,7 @@ export const pt: LocalePack = {
     footer: "© MugoX. Feito para mentes curiosas.", mascotLabel: "Mugo, o mascote do MugoX",
   },
   ui: {
+    audioHelp: "Sem som? Confira se o celular não está no silencioso, aumente o volume de mídia e veja se há uma voz instalada para este idioma (Android: Configurações › Sistema › Idiomas › Texto para fala; iPhone: Ajustes › Acessibilidade › Conteúdo Falado › Vozes).",
     check: "Verificar", cont: "Continuar", correct: "Correto!", wrong: "Quase", answerWas: "Resposta correta:", lessonDone: "Lição concluída!", outOfHearts: "Sem corações",
     outHint: "Respire fundo e comece a lição de novo.", tryAgain: "Tentar de novo", backToPath: "Voltar ao curso", nextLesson: "Próxima lição", streakDays: "dias de sequência", goal: "Meta diária",
     continueLearning: "Continuar aprendendo", exit: "Sair da lição", typeHere: "Digite sua resposta", matchHint: "Toque em uma palavra e depois no par dela", perfect: "Lição perfeita!", newBadges: "Novas medalhas",
@@ -72,11 +73,6 @@ export const pt: LocalePack = {
       { icon: "🚀", title: "Evolua todos os dias", body: "Ganhe XP, mantenha sua sequência e desbloqueie medalhas." },
     ],
     aboutTitle: "Sobre nós",
-    aboutBody: [
-      "O MugoX Lingo é um aplicativo gratuito para aprender idiomas como um jogo. Lições curtas, cartões, rodadas relâmpago e provas de unidade ajudam você a ampliar o vocabulário e a compreensão auditiva em poucos minutos por dia.",
-      "Você pode começar agora mesmo como visitante. Uma conta só acrescenta o progresso salvo em todos os seus dispositivos. Cursos atuais: espanhol, chinês (mandarim), japonês, coreano e bengali para falantes de inglês, e inglês para falantes de bengali, hindi, árabe, espanhol, francês, português, chinês, japonês e coreano.",
-      "Nós mesmos escrevemos as lições e corrigimos os erros que os leitores nos informam. Para dúvidas ou correções, visite a página de contato. O site é mantido por publicidade em algumas páginas de conteúdo; não há anúncios dentro das lições.",
-    ],
     adLabel: "Publicidade",
     faqTitle: "Perguntas",
     faq: [
@@ -88,16 +84,8 @@ export const pt: LocalePack = {
     footer: { about: "Sobre nós", privacy: "Privacidade", terms: "Termos", contact: "Contato", rights: "© MugoX Lingo. Feito para mentes curiosas." },
     skip: "Pular para o conteúdo", language: "Idioma", cookieSettings: "Configurações de cookies",
     consent: { adsNote: "Isso também nos permite mostrar anúncios do Google em algumas páginas, nunca dentro das lições.", title: "Cookies e análise", body: "Podemos usar o Google Analytics para contar visitas e ver quais lições ajudam? Ele fica desligado se você não aceitar e nunca recebe seu nome nem seu e-mail.", accept: "Aceitar", decline: "Não, obrigado" },
-    notFoundTitle: "Não encontramos essa página", home: "Voltar ao início", errorTitle: "Algo deu errado", errorBody: "Tente novamente.", retry: "Tentar de novo", loading: "Carregando…",
-    draft: "Texto provisório. Peça uma revisão antes do lançamento.", privacyTitle: "Privacidade",
-    privacyBody: [
-      "Visitantes: seu progresso é salvo neste navegador (armazenamento local) no seu dispositivo. Não o recebemos, a menos que você crie uma conta e escolha importá-lo.",
-      "Contas: guardamos seu e-mail, nome de exibição, configurações de idioma e progresso de aprendizado usando o Neon. Um cookie de sessão mantém você conectado.",
-      "Você pode reiniciar um curso na página da sua conta. Para excluir sua conta ou seus dados, use a página de contato.",
-      "Análise: somente se você aceitar, usamos o Google Analytics para contar visitas e atividade nas lições. Ele não recebe nome nem e-mail. Usa cookies com o prefixo mgxl, e você pode mudar sua escolha a qualquer momento em Configurações de cookies, no rodapé.",
-      "Publicidade: se você aceitar, mostramos anúncios do Google AdSense em algumas páginas de conteúdo, nunca dentro das lições. O Google e seus parceiros usam cookies para exibir anúncios com base em suas visitas a este e a outros sites. Por padrão, solicitamos anúncios não personalizados. Você pode saber mais sobre a publicidade personalizada ou desativá-la em adssettings.google.com ou aboutads.info, e pode mudar sua escolha a qualquer momento em Configurações de cookies, no rodapé.",
-    ],
+    notFoundTitle: "Não encontramos essa página", home: "Voltar ao início", errorTitle: "Algo deu errado", errorBody: "Tente novamente.", retry: "Tentar de novo", loading: "Carregando…", privacyTitle: "Privacidade",
     termsTitle: "Termos", termsBody: ["O MugoX é um aplicativo de aprendizado oferecido como está. O conteúdo das lições pode conter erros; avise-nos se encontrar algum.", "Não tente manipular o progresso, o XP ou os dados de outros usuários. Podemos limitar ou remover contas que façam isso.", "As contas são para pessoas com 13 anos ou mais. Aprendizes mais novos devem usar o modo visitante junto com um responsável."],
-    contactTitle: "Contato", contactBody: "Escreva para", contactMissing: "Ainda não foi configurado um endereço de contato.",
+    contactTitle: "Contato", 
   },
 };

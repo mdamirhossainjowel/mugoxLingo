@@ -191,7 +191,7 @@ test("About page exists in every language, and ads.txt is served", async ({ page
     expect(res.status(), code).toBe(200);
   }
   await page.goto("/en");
-  await page.getByRole("link", { name: "About", exact: true }).click();
+  await page.getByRole("navigation", { name: "Footer" }).getByRole("link", { name: "About", exact: true }).click();
   await expect(page).toHaveURL(/\/en\/about$/);
   const ads = await request.get("/ads.txt");
   expect(ads.status()).toBe(200);

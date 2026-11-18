@@ -4,6 +4,7 @@ import { join } from "node:path";
 import { LOCALES, locales } from "@/i18n/config";
 import { BRAND, storageKey } from "@/lib/brand";
 import { languageAlternates } from "@/lib/seo";
+import { GUIDE_LOCALES, guides } from "@/content/guides";
 import sitemap from "@/app/sitemap";
 import robots from "@/app/robots";
 
@@ -13,10 +14,12 @@ const sources = walk("src").filter((f) => /\.(ts|tsx|css)$/.test(f));
 describe("SEO", () => {
   it("sitemap has every language for every public page, with hreflang alternates and x-default", () => {
     const map = sitemap();
-    expect(map.length).toBe(5 * locales.length);
+    expect(map.length).toBe(5 * locales.length + (1 + guides.length) * GUIDE_LOCALES.length);
     for (const e of map) {
       const langs = Object.keys(e.alternates!.languages!);
-      for (const l of LOCALES) expect(langs).toContain(l.hreflang);
+      const expected = e.url.includes("/guides") ? LOCALES.filter((l) => (GUIDE_LOCALES as readonly string[]).includes(l.code)) : LOCALES;
+      for (const l of expected) expect(langs).toContain(l.hreflang);
+      expect(langs.length).toBe(expected.length + 1);
       expect(langs).toContain("x-default");
       expect(e.url).not.toMatch(/learn|account|login/);
     }
@@ -27,7 +30,10 @@ describe("SEO", () => {
   });
   it("robots blocks private routes in every language and points to the sitemap", () => {
     const r = robots(); const rules = Array.isArray(r.rules) ? r.rules : [r.rules]; const rule = rules.find((x) => x.userAgent === "*")!;
-    for (const code of locales) for (const p of ["account", "login", "learn"]) expect(rule.disallow).toContain(`/${code}/${p}`);
+    for (const code of locales) for (const p of ["account", "login", "signup", "update-password"]) expect(rule.disallow).toContain(`/${code}/${p}`);
+    // Lessons are open to guests, so they are not blocked in robots.txt (they carry a noindex tag instead).
+    for (const code of locales) expect(rule.disallow).not.toContain(`/${code}/learn`);
+    expect(rule.disallow).toContain("/api/");
     expect(r.sitemap).toMatch(/sitemap\.xml$/);
   });
 });

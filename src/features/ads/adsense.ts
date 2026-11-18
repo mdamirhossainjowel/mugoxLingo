@@ -12,9 +12,9 @@ export const PERSONALIZED_ADS = process.env.NEXT_PUBLIC_ADSENSE_PERSONALIZED ===
 /** The one line Google asks for in ads.txt. */
 export const adsTxtLine = (client: string) => `google.com, ${client.replace(/^ca-/, "")}, DIRECT, f08c47fec0942fa0`;
 
-/** Ads appear only on content pages: the home page and the About page. Never in lessons, exams, accounts or sign-in. */
-export const AD_SECTIONS = ["about"] as const;
+/** Ads appear only on content pages: the home page, the About page and the learning guides. Never in lessons, exams, accounts or sign-in. */
+export const AD_SECTIONS = ["about", "guides"] as const;
 export function adsAllowedPath(pathname: string | null): boolean {
   const seg = (pathname ?? "").split("/").filter(Boolean);
-  return seg.length === 1 || (seg.length === 2 && (AD_SECTIONS as readonly string[]).includes(seg[1]));
+  return seg.length === 1 || ((seg.length === 2 || (seg.length === 3 && seg[1] === "guides")) && (AD_SECTIONS as readonly string[]).includes(seg[1]));
 }

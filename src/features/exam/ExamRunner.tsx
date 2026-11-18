@@ -94,7 +94,7 @@ export default function ExamRunner({ locale, course, unit, authed, serverProgres
         <span className={left <= 30 ? "text-coral" : ""} role="timer" aria-label={`${t.exTimeLeft}: ${fmt(left)}`}>⏱ {fmt(left)}</span></div>
       <ol className="mt-3 flex flex-wrap gap-2" aria-label="Questions">{questions.map((qq, k) => (
         <li key={qq.id}><button type="button" onClick={() => setIdx(k)} aria-current={k === idx} aria-label={`${t.exQuestion} ${k + 1}${answers[qq.id] ? ", answered" : ""}${flagged.has(qq.id) ? `, ${t.exFlagged}` : ""}`}
-          className={`size-10 rounded-full border-4 font-bold ${k === idx ? "border-plum" : "border-transparent"} ${flagged.has(qq.id) ? "bg-mango" : answers[qq.id] ? "bg-lagoon text-white" : "bg-white"}`}>{k + 1}</button></li>))}</ol>
+          className={`size-10 rounded-full border-4 font-bold ${k === idx ? "border-plum" : "border-transparent"} ${flagged.has(qq.id) ? "bg-mango" : answers[qq.id] ? "bg-lagoon-deep text-white" : "bg-white"}`}>{k + 1}</button></li>))}</ol>
       {left === 0 && <p role="alert" className="mt-3 font-bold text-coral-deep">{t.exTimeUp}</p>}
       {error && <p role="alert" className="mt-3 font-bold text-coral-deep">{error}</p>}
       <div className="mt-8">{questions.map((qq, k) => (

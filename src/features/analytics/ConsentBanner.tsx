@@ -24,7 +24,7 @@ export default function ConsentBanner({ locale }: { locale: Locale }) {
       <p id="consent-title" className="font-display text-xl font-extrabold">🍪 {t.title}</p>
       <p id="consent-body" className="mt-1 font-semibold">{t.body}{adsEnabled() ? ` ${t.adsNote}` : ""}</p>
       <div className="mt-3 flex flex-wrap gap-3">
-        <button type="button" onClick={() => choose("granted")} className="min-h-12 rounded-full bg-lagoon px-6 font-display text-lg font-bold text-white shadow-[0_4px_0_var(--color-lagoon-deep)]">{t.accept}</button>
+        <button type="button" onClick={() => choose("granted")} className="min-h-12 rounded-full bg-lagoon-deep px-6 font-display text-lg font-bold text-white shadow-[0_4px_0_var(--color-lagoon-dark)]">{t.accept}</button>
         <button type="button" onClick={() => choose("denied")} className="min-h-12 rounded-full border-4 border-mist px-6 font-display text-lg font-bold">{t.decline}</button>
       </div>
     </div>);

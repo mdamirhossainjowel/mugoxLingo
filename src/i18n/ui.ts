@@ -9,6 +9,7 @@ const en = {
   saveNote: "Progress is saved on this device only. Create an account later to sync it.", storageOff: "Your browser blocks saving, so progress will be lost when you close this tab.",
   loading: "Loading…", notFound: "We could not find that lesson.", hearts: "Hearts left", tray: "Your sentence",
   cheers: ["Great job!", "Nice one!", "You got it!", "Awesome!", "Brilliant!", "Keep going!"], inARow: "in a row", level: "Level", levels: ["Sprout", "Explorer", "Traveler", "Speaker", "Storyteller", "Legend"], toNext: "XP to next level",
+  audioHelp: "No sound? Make sure your phone is not on silent, turn the media volume up, and check that a voice for this language is installed (Android: Settings › System › Language › Text-to-speech; iPhone: Settings › Accessibility › Spoken Content › Voices).",
   listenHint: "Tap the speaker, then pick what you heard.", playAudio: "Play audio", playSlow: "Play slowly", noAudio: "No voice for this language on your device, so read the word instead.",
   badges: { first_lesson: "First lesson", perfect: "Perfect run", streak_3: "3-day streak", exam_pass: "Exam passed", streak_7: "7-day streak", five_lessons: "5 lessons done" } as Record<string, string>,
 };
@@ -22,6 +23,7 @@ const bn: Ui = {
   saveNote: "অগ্রগতি শুধু এই ডিভাইসে সংরক্ষিত। সিঙ্ক করতে পরে অ্যাকাউন্ট খুলো।", storageOff: "তোমার ব্রাউজার সংরক্ষণ আটকে দিচ্ছে, তাই ট্যাব বন্ধ করলে অগ্রগতি হারিয়ে যাবে।",
   loading: "লোড হচ্ছে…", notFound: "পাঠটি খুঁজে পাওয়া যায়নি।", hearts: "বাকি হার্ট", tray: "তোমার বাক্য",
   cheers: ["দারুণ!", "চমৎকার!", "পেরেছ!", "অসাধারণ!", "দুর্দান্ত!", "এগিয়ে চলো!"], inARow: "টানা", level: "লেভেল", levels: ["অঙ্কুর", "অভিযাত্রী", "পর্যটক", "বক্তা", "গল্পকার", "কিংবদন্তি"], toNext: "XP পরের লেভেলে",
+  audioHelp: "শব্দ আসছে না? ফোন সাইলেন্টে নেই তা দেখো, মিডিয়া ভলিউম বাড়াও, আর এই ভাষার ভয়েস ইনস্টল আছে কি না দেখো (অ্যান্ড্রয়েড: সেটিংস › সিস্টেম › ভাষা › টেক্সট-টু-স্পিচ; আইফোন: সেটিংস › অ্যাক্সেসিবিলিটি › Spoken Content › Voices)।",
   listenHint: "স্পিকারে ট্যাপ করো, তারপর যা শুনলে তা বাছো।", playAudio: "অডিও চালাও", playSlow: "ধীরে চালাও", noAudio: "তোমার ডিভাইসে এই ভাষার ভয়েস নেই, তাই শব্দটি পড়ে নাও।",
   badges: { first_lesson: "প্রথম পাঠ", perfect: "নিখুঁত পাঠ", streak_3: "৩ দিনের স্ট্রিক", exam_pass: "পরীক্ষায় পাস", streak_7: "৭ দিনের স্ট্রিক", five_lessons: "৫টি পাঠ শেষ" },
 };

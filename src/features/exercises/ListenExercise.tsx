@@ -15,18 +15,18 @@ type Listen = Extract<Exercise, { type: "listen" }>;
 export default function ListenExercise({ exercise, locked, ui, onChange }: RendererProps<Listen>) {
   const locale = useLocale(); const prompt = localizePrompt(exercise.prompt, locale);
   const reduce = useReducedMotion(); const ctx = useSpeechLang(); const lang = exercise.lang ?? ctx;
-  const { hasVoice, speak } = useSpeech(lang); const [sel, setSel] = useState<number | null>(null);
-  useEffect(() => { if (hasVoice) speak(exercise.say); }, [hasVoice, speak, exercise.say]);
+  const { canSpeak, voiceFound, failed, speak } = useSpeech(lang); const [sel, setSel] = useState<number | null>(null);
+  useEffect(() => { if (voiceFound) speak(exercise.say, false, true); }, [voiceFound, speak, exercise.say]);
   const pick = (i: number) => { if (locked) return; setSel(i); onChange({ type: "listen", choice: i }); };
   return (
     <div>
       <h2 className="font-display text-3xl font-extrabold"><RichText text={prompt} /></h2>
       <p className="mt-1 text-sm font-bold opacity-70">{ui.listenHint}</p>
       <div className="mt-5 flex flex-wrap items-center gap-4">
-        <SpeakButton text={exercise.say} lang={lang} label={ui.playAudio} slowLabel={ui.playSlow} unavailable={ui.noAudio} />
-        {!hasVoice && <p role="status" className="font-display text-3xl font-extrabold"><RichText text={exercise.say} /></p>}
+        <SpeakButton text={exercise.say} lang={lang} />
+        {(!canSpeak || failed) && <p className="font-display text-3xl font-extrabold"><RichText text={exercise.say} /></p>}
       </div>
-      {!hasVoice && <p className="mt-2 text-sm font-semibold text-coral-deep">{ui.noAudio}</p>}
+      {!canSpeak && <p className="mt-2 text-sm font-semibold text-coral-deep">{ui.noAudio}</p>}
       <ul className="mt-6 grid gap-3 md:grid-cols-2" role="group" aria-label={ui.listenHint}>
         {exercise.choices.map((c, i) => (
           <li key={c}><motion.button type="button" disabled={locked} aria-pressed={sel === i} onClick={() => pick(i)} whileTap={reduce ? undefined : { scale: 0.95 }}
